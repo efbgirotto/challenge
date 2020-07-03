@@ -13,13 +13,13 @@ t.test('validator with all available rules', async t => {
   })
 
   t.test('should not fail using all available rules', async t => {
-    await validator.validate('xR2O%9@61RuBt75Z')
+    await validator.validate('xR2O%9@61uBt75Z')
     t.ok(validator.isValid)
   })
 
   t.test('should fail with all available rules', async t => {
     const samples = [
-      '', 'abc123', 'abcdefghij',
+      '', 'aa', 'abc123', 'abcdefghij',
       '1234567890', 'ABCDEFGHIJ'
     ]
 
@@ -50,7 +50,7 @@ t.test('api endpoint', async t => {
     const response = await server.inject({
       method: 'post',
       url: '/check-password',
-      payload: { password: 'xR2O%9@61RuBt75Z' }
+      payload: { password: 'xR2O%9@61uBt75Z' }
     })
 
     t.strictEqual(response.statusCode, 200)

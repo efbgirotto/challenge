@@ -11,6 +11,7 @@ async function validatePassword ({ password }) {
   passwordValidator = Rules.Lowercase(passwordValidator)
   passwordValidator = Rules.Uppercase(passwordValidator)
   passwordValidator = Rules.SpecialCharacter(passwordValidator)
+  passwordValidator = Rules.Isogram(passwordValidator)
 
   await passwordValidator.validate(password)
 
