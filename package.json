@@ -1,0 +1,26 @@
+{
+  "name": "challenge",
+  "author": "Fernando Girotto <fernando@girotto.blog.br>",
+  "license": "ISC",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "start": "node src/server.js",
+    "test": "npm run lint && npm run unit",
+    "unit": "tap -J",
+    "unit:spec": "npm run unit -- --reporter=spec"
+  },
+  "devDependencies": {
+    "sinon": "^9.0.2",
+    "standard": "^14.3.4",
+    "tap": "^14.10.7"
+  },
+  "dependencies": {
+    "fastify": "2.15.1",
+    "fastify-cors": "3.0.3",
+    "fastify-formbody": "3.2.0",
+    "fastify-helmet": "3.0.2",
+    "fastify-oas": "2.7.0"
+  }
+}

@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  challenge:
+    image: ${REPOSITORY:-efbgirotto}/challenge:${TAG:-latest}
+    build:
+      context: .
+      target: release
+    environment: 
+      HOST: "0.0.0.0"
+    ports:
+      - "3000:3000"
+  
+  challenge-tests:
+    image: ${REPOSITORY:-efbgirotto}/challenge-tests:${TAG:-latest}
+    build:
+      context: .
+      target: test

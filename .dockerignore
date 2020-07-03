@@ -1,0 +1,14 @@
+**/*.log
+**/*.md
+**/._*
+**/.dockerignore
+**/.env
+**/.DS_Store
+**/.git/
+**/.gitattributes
+**/.gitignore
+**/.gitmodules
+**/docker-compose.yaml
+**/Thumbs.db
+.vscode/
+!README.md
